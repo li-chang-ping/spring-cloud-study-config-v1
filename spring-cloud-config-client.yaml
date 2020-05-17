@@ -10,9 +10,13 @@ spring:
   application:
     name: spring-cloud-config-client
 eureka:
+  instance:
+    instance-id: config-client-3355
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
   client:
     service-url:
-      defaultZone: http://eureka-dev.com:7001/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
 ---
 server:
   port: 8202
@@ -21,6 +25,10 @@ spring:
   application:
     name: spring-cloud-config-client
 eureka:
+  instance:
+    instance-id: config-client-3355
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
   client:
     service-url:
-      defaultZone: http://eureka-test.com:7001/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
