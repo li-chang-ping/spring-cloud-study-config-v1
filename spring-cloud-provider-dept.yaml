@@ -1,17 +1,17 @@
 spring:
   profiles:
     active:
-      - 8001
+      - 10001
 ---
 server:
-  port: 8001
+  port: 10001
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.lcp.springcloud.entities
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml
 spring:
-  profiles: 8001
+  profiles: 10001
   application:
     name: spring-cloud-provider-dept
   datasource:
@@ -30,7 +30,7 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: provider-dept-config-8001
+    instance-id: provider-dept-config-10001
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
@@ -41,14 +41,14 @@ info:
   build.version: $project.version$
 ---
 server:
-  port: 8002
+  port: 10002
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.lcp.springcloud.entities
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml
 spring:
-  profiles: 8002
+  profiles: 10002
   application:
     name: spring-cloud-provider-dept
   datasource:
@@ -67,7 +67,7 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: provider-dept-config-8002
+    instance-id: provider-dept-config-10002
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
@@ -78,14 +78,14 @@ info:
   build.version: $project.version$
 ---
 server:
-  port: 8003
+  port: 10003
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.lcp.springcloud.entities
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml
 spring:
-  profiles: 8003
+  profiles: 10003
   application:
     name: spring-cloud-provider-dept
   datasource:
@@ -104,7 +104,7 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: provider-dept-config-8003
+    instance-id: provider-dept-config-10003
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
